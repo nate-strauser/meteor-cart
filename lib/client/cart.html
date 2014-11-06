@@ -1,0 +1,17 @@
+<template name="CartSummary">
+	{{itemCount}} items
+	<br>
+	Total ${{itemTotal}}
+	{{#if itemsInCart}}
+		<br>
+		{{>CartPayNow}}
+	{{/if}}
+</template>
+
+<template name="CartAddItemButton">
+	<button class="add-item">Add To Cart</button>
+</template>
+
+<template name="CartPayNow">
+	<button id="pay-now">Pay Now</button>
+</template>

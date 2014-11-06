@@ -1,0 +1,33 @@
+<head>
+  <title>cart - example</title>
+</head>
+
+<body>
+	{{> loginButtons}}
+	<hr>
+  {{> CartSummary}}
+  <br><br>
+  <small>Use '4242 4242 4242 4242' for testing</small>
+
+  {{> products}}
+</body>
+
+
+
+<template name="products">
+	<div>
+		<h4>Static Product</h4>
+		$1.99
+		{{>CartAddItemButton price=1.99 _id='static'}}
+	</div>
+
+	<hr>
+
+	{{#each products}}
+		<div>
+			<h3>{{name}}</h3>
+			{{price}}
+			{{>CartAddItemButton}}
+		</div>
+	{{/each}}
+</template>
