@@ -1,8 +1,8 @@
 Package.describe({
     summary: "Cart",
     name: "natestrauser:cart",
-    summary: "A simple and pluggable shopping cart",
-  	version: "0.0.3",
+    summary: "A simple and pluggable shopping cart that uses stripe for payments",
+  	version: "0.0.5",
     git: "https://github.com/nate-strauser/meteor-cart.git"
 });
 
@@ -19,7 +19,7 @@ Package.on_use(function (api) {
 	  , 'client');
 
 	api.use([
-		'mongo@1.0.8', 'underscore', 'accounts-base', 'random'
+		'iron:router@1.0.0', 'mongo@1.0.8', 'underscore', 'accounts-base', 'random'
 		], ['server','client']);
 
 	

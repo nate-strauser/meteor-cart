@@ -1,11 +1,17 @@
-meteor-cart
+cart
 ===========
 
-A simple shopping cart package for meteorjs
+A simple shopping cart package for meteorjs that uses stripe for payments
 
 Run the example app with `meteor --settings settings.json` - settings are needed for stripe api keys
 
 Live demo at http://cartdemo.meteor.com
+
+
+------
+
+messy notes below....
+
 
 Exports `Cart` object
 

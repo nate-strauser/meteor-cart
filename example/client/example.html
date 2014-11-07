@@ -2,23 +2,33 @@
   <title>cart - example</title>
 </head>
 
-<body>
-	{{> loginButtons}}
-	<hr>
-  {{> CartSummary}}
-  <br><br>
-  <small>Use '4242 4242 4242 4242' for testing</small>
+<template name="layout">
+  <header>
+    <h1>Cart Demo</h1>
+  	{{> loginButtons}}
+  </header>
+  <hr>
 
-  {{> products}}
-</body>
-
-
+  <article>
+    {{> yield}}
+  </article>
+</template>
 
 <template name="products">
+	{{> CartSummary}}
+	
+	<br><br>
+  	
+  	<small>Use '4242 4242 4242 4242' for testing</small>
+  	
+  	<br><br>
+  	
+  	<hr>
+	
 	<div>
 		<h4>Static Product</h4>
 		$1.99
-		{{>CartAddItemButton price=1.99 _id='static'}}
+		{{>CartAddItemButton price=1.99 name="Static Product" _id='static'}}
 	</div>
 
 	<hr>
